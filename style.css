@@ -1,0 +1,134 @@
+/* PX0 Wiki stylesheet
+   Tweak the colors/fonts in :root and everything else follows. */
+
+:root {
+  --bg: #FFFFFF;
+  --bg-alt: #F8F9FA;
+  --text: #202122;
+  --text-dim: #54595D;
+  --accent: #0645AD;
+  --border: #A2A9B1;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.topbar .inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.topbar .logo {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.topbar a.nav {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.topbar a.nav:hover { border-bottom-color: var(--border); }
+.topbar a.nav.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------- Content ---------- */
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+h1 { margin-top: 0; }
+
+h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.toc ul { margin: 0; padding-left: 1.2rem; }
+
+code {
+  font-family: var(--font-mono);
+  background: var(--bg-alt);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.92em;
+}
+
+pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code { background: none; padding: 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th { background: var(--bg-alt); }
+
+.placeholder { color: var(--text-dim); font-style: italic; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
